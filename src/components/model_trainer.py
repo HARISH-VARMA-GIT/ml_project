@@ -42,11 +42,11 @@ class ModelTrainer:
                 "Decision Tree": DecisionTreeClassifier(),
                 "Logistic Regression": LogisticRegression(),
                 "XGBClassifier": XGBClassifier(),
-                "AdaBoost Classifier": AdaBoostClassifier(),
+                "AdaBoost Classifier": AdaBoostClassifier()
             }
             params={
                 "Decision Tree": {
-                    'criterion':['gini', 'entropy', 'log_loss'],
+                    'criterion':['gini', 'entropy', 'log_loss']
                 },
                 "Random Forest":{
                     'n_estimators': [8,16,32,64,128,386]
@@ -91,6 +91,7 @@ class ModelTrainer:
             )
 
             predicted=best_model.predict(X_test)
+            print(best_model_name)
 
             accuracy = accuracy_score(y_test, predicted)
             return accuracy
