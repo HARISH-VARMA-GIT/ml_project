@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Credit Risk Predictor</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.1.0/css/bootstrap.min.css">
+    <style>
+        body {
+            background-color: #e9ecef;
+        }
+
+        .container {
+            max-width: 700px;
+            margin: 0 auto;
+            margin-top: 50px; 
+            margin-bottom: 50px;
+            padding: 30px;
+            border-radius: 25px;
+            background-color: #ffffff;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h1, h2 {
+            text-align: center;
+            color: #343a40;
+        }
+
+        label {
+            color: #343a40;
+            font-weight: bold;
+        }
+
+        .btn-primary {
+            background-color: #007bff;
+            border-color: #007bff;
+        }
+
+        .btn-primary:hover {
+            background-color: #0069d9;
+            border-color: #0062cc;
+        }
+
+        .credit-image {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .credit-image img {
+            max-width: 100%;
+            border-radius: 5px;
+        }
+
+        .form-group {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .form-group label {
+            flex: 0 0 40%;
+        }
+
+        .form-group input {
+            flex: 0 0 60%;
+        }
+
+        .mb-3 {
+            margin-bottom: 1rem;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Credit Risk Predictor</h1>
+   
+        <div class="credit-image">
+            <img src="https://user-images.githubusercontent.com/67468718/149666189-fbae54b6-b123-4905-8348-e59ec94cdb1c.png" alt="Credit Risk Image">
+        </div>
+
+        <form action="/predictdata" method="post">
+            <h2>Credit Risk Predictor</h2>
+            <div class="form-group mb-3">
+                <label for="laufkont">Status</label>
+                <select class="form-control" id="laufkont" name="laufkont" required>
+                    <option value="1">No checking account</option>
+                    <option value="2">Less than 0 DM</option>
+                    <option value="3">0 to 200 DM</option>
+                    <option value="4">Greater than 200 DM</option>
+                </select>
+            </div>
+            <div class="form-group mb-3">
+                <label for="laufzeit">Credit Duration(months)</label>
+                <input class="form-control" type="number" id="laufzeit" name="laufzeit"
+                    placeholder="Enter your duration" min="4" max="72" required>
+            </div>
+            <div class="form-group mb-3">
+                <label for="moral">Credit History</label>
+                <select class="form-control" id="moral" name="moral" required>
+                    <option value="0">Delay in paying off in the past</option>
+                    <option value="1">Critical account / Other credits elsewhere</option>
+                    <option value="2">No credits taken / All credits paid back duly</option>
+                    <option value="3">Existing credits paid back duly till now</option>
+                    <option value="4">All credits at this bank paid back duly</option>
+                </select>
+            </div>
+            
+            <div class="form-group mb-3">
+                <label for="verw">Purpose</label>
+                <select class="form-control" id="verw" name="verw" required>
+                    <option value="1">Car(New)</option>
+                    <option value="2">Car(Used)</option>
+                    <option value="3">Furniture/Equipment</option>
+                    <option value="4">Radio/Television</option>
+                    <option value="5">Domestic Appliances</option>
+                    <option value="6">Repairs</option>
+                    <option value="7">Education</option>
+                    <option value="8">Vacation</option>
+                    <option value="9">Retraining</option>
+                    <option value="10">Business</option>
+                    <option value="0">Others</option>
+                </select>
+            </div>
+            
+            <div class="form-group mb-3">
+                <label for="hoehe">Credit Amount(DM)</label>
+                <input class="form-control" type="number" id="hoehe" name="hoehe"
+                    placeholder="Enter your amount" min="250" max="18500" required>
+            </div>
+            <div class="form-group mb-3">
+                <label for="sparkont">Saving's</label>
+                <select class="form-control" id="sparkont" name="sparkont" required>
+                    <option value="1">No savings account</option>
+                    <option value="2">Less than 100 DM</option>
+                    <option value="3">100 to 500 DM</option>
+                    <option value="4">500 to 1000 DM</option>
+                    <option value="5">More than 1000 DM</option>
+                </select>
+            </div>
+            
+            <div class="form-group mb-3">
+                <label for="beszeit">Employment Duration</label>
+                <select class="form-control" id="beszeit" name="beszeit" required>
+                    <option value="1">Unemployed</option>
+                    <option value="2">Less than 1 yr</option>
+                    <option value="3">1 to 4 yrs</option>
+                    <option value="4">4 to 7 yrs</option>
+                    <option value="5">More than 7 yrs</option>
+                </select>
+            </div>
+            
+            <div class="form-group mb-3">
+                <label for="rate">Installment rate</label>
+                <select class="form-control" id="rate" name="rate" required>
+                    <option value="1">Greater than 35</option>
+                    <option value="2">25 to 35</option>
+                    <option value="3">20 to 25</option>
+                    <option value="4">Less than 20</option>
+                </select>
+            </div>
+            
+            <div class="form-group mb-3">
+                <label for="famges">Personal Status</label>
+                <select class="form-control" id="famges" name="famges" required>
+                    <option value="1">Male: divorced/separated</option>
+                    <option value="2">Female: non-single / Male: single</option>
+                    <option value="3">Male: married/widowed</option>
+                    <option value="4">Female: single</option>
+                </select>
+            </div>
+            
+            <div class="form-group mb-3">
+                <label for="buerge">Debtor's</label>
+                <select class="form-control" id="buerge" name="buerge" required>
+                    <option value="1">None</option>
+                    <option value="2">Co-applicant</option>
+                    <option value="3">Guarantor</option>
+                </select>
+            </div>
+            
+            <div class="form-group mb-3">
+                <label for="wohnzeit">Present Residence</label>
+                <select class="form-control" id="wohnzeit" name="wohnzeit" required>
+                    <option value="1">Less than 1 yr</option>
+                    <option value="2">1 to 4 yrs</option>
+                    <option value="3">4 to 7 yrs</option>
+                    <option value="4">More than 7 yrs</option>
+                </select>
+            </div>
+            
+            <div class="form-group mb-3">
+                <label for="verm">Type of Property</label>
+                <select class="form-control" id="verm" name="verm" required>
+                    <option value="1">No property</option>
+                    <option value="2">Car or other vehicle</option>
+                    <option value="3">Building/Saving agr./Life Insurance</option>
+                    <option value="4">Real Estate</option>
+                </select>
+            </div>
+            
+            <div class="form-group mb-3">
+                <label for="alter">Age</label>
+                <input class="form-control" type="number" id="alter" name="alter"
+                    placeholder="Enter your age" min="19" max="75" required>
+            </div>
+            <div class="form-group mb-3">
+                <label for="weitkred">Other Installment Plans</label>
+                <select class="form-control" id="weitkred" name="weitkred" required>
+                    <option value="1">Another Bank</option>
+                    <option value="2">Store(s)</option>
+                    <option value="3">None</option>
+                </select>
+            </div>
+            
+            <div class="form-group mb-3">
+                <label for="wohn">Type of Housing</label>
+                <select class="form-control" id="wohn" name="wohn" required>
+                    <option value="1">Free</option>
+                    <option value="2">Rented</option>
+                    <option value="3">Own</option>
+                </select>
+            </div>
+            <div class="form-group mb-3">
+                <label for="bishkred">Number of Credits</label>
+                <select class="form-control" id="bishkred" name="bishkred" required>
+                    <option value="1">At least 1</option>
+                    <option value="2">2 to 3</option>
+                    <option value="3">4 to 5</option>
+                    <option value="4">6 or more</option>
+                </select>
+            </div>
+            
+            <div class="form-group mb-3">
+                <label for="beruf">Job Type</label>
+                <select class="form-control" id="beruf" name="beruf" required>
+                    <option value="1">Unemployed/Unskilled (Non-resident)</option>
+                    <option value="2">Unskilled (Resident)</option>
+                    <option value="3">Skilled employee/Official</option>
+                    <option value="4">Manager/Self-employed/Highly qualified employee</option>
+                </select>
+            </div>
+            
+            <div class="form-group mb-3">
+                <label for="pers">People Liable</label>
+                <select class="form-control" id="pers" name="pers" required>
+                    <option value="1">3 or more</option>
+                    <option value="2">0 to 2</option>
+                </select>
+            </div>
+            <div class="form-group mb-3">
+                <label for="telef">Telephone Availability</label>
+                <select class="form-control" id="telef" name="telef" required>
+                    <option value="1">Yes</option>
+                    <option value="2">No</option>
+                </select>
+            </div>
+            <div class="form-group mb-3">
+                <label for="gastarb">Foreign Worker</label>
+                <select class="form-control" id="gastarb" name="gastarb" required>
+                    <option value="1">Yes</option>
+                    <option value="2">No</option>
+                </select>
+            </div>
+
+            <div class="mb-3 text-center">
+                <input class="btn btn-primary" type="submit" value="Predict" required>
+            </div>
+        </form>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.1.0/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
