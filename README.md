@@ -62,6 +62,12 @@ Webpage & deployment :
 
 The Prediction of Credit Risk Final Model Run in Local Enviornment
 
+**Home Page :**
+
+**Prediction Page :**
+
+**Output Page :**
+
 ## **Deployment Link**
 
 AWS - 
