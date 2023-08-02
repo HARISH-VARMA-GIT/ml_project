@@ -1,1 +1,76 @@
-<h1>Welcome to the home page</h1>
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Welcome to Credit Risk Predictor</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.1.0/css/bootstrap.min.css">
+    <style>
+        body {
+            background-color: #e9ecef;
+        }
+
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 20px;
+            border-radius: 10px;
+            background-color: #ffffff;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h1, h2 {
+            text-align: center;
+            color: #343a40;
+        }
+
+        .credit-image {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .credit-image img {
+            max-width: 100%;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Welcome to Credit Risk Predictor</h1>
+   
+        <div class="credit-image">
+            <img src="https://user-images.githubusercontent.com/67468718/149666189-fbae54b6-b123-4905-8348-e59ec94cdb1c.png" alt="Credit Risk Image">
+        </div>
+
+        <h2>About the Predictor</h2>
+        <p>
+            Welcome to Credit Risk Predictor, a tool designed to assess creditworthiness and help you understand your credit risk.
+            Credit risk refers to the likelihood that an individual or organization will repay loan or credit card bills.
+            A "Good" credit risk score indicates that the person is likely to repay loans or bills.Wheras "Bad" credit risk score indicates that the person is not likely to repay loans or bills
+
+        </p>
+
+        <h2>How it Works</h2>
+        <ol>
+            <li><strong>Data Collection:</strong> You begin by entering key financial information, such as your payment history, income, and other relevant details, into the predictor.</li>
+            <li><strong>Feature Extraction:</strong> The predictor processes this data and extracts essential features that contribute to your creditworthiness.</li>
+            <li><strong>Machine Learning Model:</strong> The extracted features are then fed into a sophisticated machine learning model, which has been trained on a vast dataset of credit histories.</li>
+            <li><strong>Pattern Recognition:</strong> The model analyzes the patterns within the data to understand how specific factors relate to credit risk.</li>
+            <li><strong>Credit Risk Score:</strong> Based on the analysis, the predictor generates a personalized credit risk score that categorizes your creditworthiness as either "Good" or "Bad."</li>
+        </ol>
+        <p>
+            It's important to note that the Credit Risk Predictor is designed to provide an accurate assessment of your credit risk. However, it is just one tool in your financial toolkit. Always consider other financial factors and seek professional advice for a comprehensive understanding of your financial situation.
+        </p>
+
+        <h2>Get Started</h2>
+        <p>
+            To get started with the Credit Risk Predictor, click the button below to go to the prediction form.
+        </p>
+
+        <div class="text-center">
+            <a href="http://127.0.0.1:8080/predictdata" class="btn btn-primary">Go to Prediction</a>
+        </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.1.0/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
