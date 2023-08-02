@@ -64,9 +64,17 @@ The Prediction of Credit Risk Final Model Run in Local Enviornment
 
 **Home Page :**
 
+<img width="229" alt="image" src="https://github.com/HARISH-VARMA-GIT/ml_project/assets/79095697/2b275ac4-7603-418a-8a5a-06d07ce536d4">
+
+
 **Prediction Page :**
 
+<img width="177" alt="image" src="https://github.com/HARISH-VARMA-GIT/ml_project/assets/79095697/3f4dcbd1-e9ff-4906-884c-6946a0fa076a">
+
+
 **Output Page :**
+
+<img width="456" alt="image" src="https://github.com/HARISH-VARMA-GIT/ml_project/assets/79095697/60ed1b74-6eda-4a05-96bb-0467cea227ba">
 
 ## **Deployment Link**
 
