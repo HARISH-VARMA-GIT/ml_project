@@ -76,9 +76,16 @@ The Prediction of Credit Risk Final Model Run in Local Enviornment
 
 <img width="456" alt="image" src="https://github.com/HARISH-VARMA-GIT/ml_project/assets/79095697/60ed1b74-6eda-4a05-96bb-0467cea227ba">
 
+## Demo Video
+
+
+[![ml_project](https://img.youtube.com/vi/GGwIrEVEnEE)](https://www.youtube.com/watch?v=GGwIrEVEnEE)
+
+
 ## **Deployment Link**
 
-AWS - 
+AWS - http://3.110.190.101:8080/
+Flask - http://127.0.0.1:8080
 
 ## **Installation**
 
@@ -87,6 +94,7 @@ The Code is written in Python 3.8.11.If you are using a lower version of Python 
 1. Create a Virtual Env with conda create "Your Env name"
 2. pip install -r requirements.txt
 3. Run app.py file
+4. Open the link http://127.0.0.1:8080 in web browser
 
 ## **Technology Used**
 
@@ -101,9 +109,9 @@ The Code is written in Python 3.8.11.If you are using a lower version of Python 
 9. AWS
 10. Docker
 
-## **Document**
+## **Documents**
 
-Below providing the link of all the document that are required for creating the project.
+Below is the link of all the documents that are required for creating the project.
 
-Link: 
+Link: https://github.com/HARISH-VARMA-GIT/ml_project/tree/main/docs
 
