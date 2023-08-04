@@ -79,7 +79,7 @@ The Prediction of Credit Risk Final Model Run in Local Enviornment
 ## Demo Video
 
 
-[![ml_project](https://img.youtube.com/vi/GGwIrEVEnEE)](https://www.youtube.com/watch?v=GGwIrEVEnEE)
+[![image alt text](https://img.youtube.com/vi/GGwIrEVEnEE)](https://www.youtube.com/watch?v=GGwIrEVEnEE)
 
 
 ## **Deployment Link**
